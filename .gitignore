@@ -1,5 +1,11 @@
-﻿.DS_Store
+.DS_Store
 Thumbs.db
 *.log
 node_modules/
 .env
+
+# Archivos de desarrollo / temporales
+indexssss.html
+stylesss.css
+Gemini_Generated_Image_*.jpg
+modo_de_uso_movile.pdf
