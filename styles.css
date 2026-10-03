@@ -1,4 +1,4 @@
-﻿/* ==========================================
+/* ==========================================
    DELMONTE FUNGI - styles.css
    ========================================== */
 
@@ -585,4 +585,194 @@ ul { list-style: none; }
   .why-strip__grid { grid-template-columns: 1fr; }
   .process__stats { grid-template-columns: repeat(3, 1fr); }
   .announcement-bar { font-size: 0.75rem; padding: 0.5rem 2.5rem; }
+}
+
+/* ==========================================
+   CERTIFICADO METALES PESADOS
+   ========================================== */
+
+.cert-section {
+  padding: 6rem 0;
+  background: linear-gradient(180deg, var(--cream) 0%, #f0ede6 100%);
+}
+
+/* KPIs */
+.cert-kpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+.cert-kpi {
+  background: var(--green-dark);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition);
+}
+.cert-kpi:hover { transform: translateY(-4px); }
+.cert-kpi__num {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--orange-light);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.cert-kpi__label {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+/* WHY BOX */
+.cert-why {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: #fff;
+  border-left: 4px solid var(--green-light);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow);
+}
+.cert-why__icon { font-size: 2.5rem; flex-shrink: 0; }
+.cert-why__text h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--green-dark); }
+.cert-why__text p { color: var(--gray); line-height: 1.7; }
+
+/* TABLE */
+.cert-table-wrap {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+.cert-table-header {
+  background: var(--green-dark);
+  color: #fff;
+  padding: 1.5rem 2rem;
+}
+.cert-table-header h3 { font-size: 1.1rem; margin-bottom: 0.25rem; }
+.cert-table-header p { font-size: 0.8rem; opacity: 0.75; }
+.cert-table-scroll { overflow-x: auto; }
+.cert-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.cert-table thead tr { background: #f8f5ef; }
+.cert-table th {
+  padding: 1rem 1.25rem;
+  text-align: center;
+  font-weight: 700;
+  color: var(--green-dark);
+  border-bottom: 2px solid #e5e0d5;
+  white-space: nowrap;
+}
+.cert-table th:first-child { text-align: left; }
+.cert-table td {
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid #f0ece5;
+  text-align: center;
+}
+.cert-table td:first-child { text-align: left; }
+.cert-table tbody tr:hover { background: #faf8f4; }
+.cert-table--small { font-size: 0.85rem; }
+
+.cert-val { font-weight: 700; border-radius: 6px; padding: 0.2rem 0.6rem; display: inline-block; }
+.cert-val.safe { color: #166534; background: #dcfce7; }
+.cert-val.limit { color: #991b1b; background: #fee2e2; }
+
+.cert-limit-row td { background: #fff8f8; }
+.cert-table-note {
+  padding: 1rem 2rem;
+  font-size: 0.82rem;
+  color: #166534;
+  background: #f0fdf4;
+  border-top: 1px solid #d1fae5;
+}
+
+/* INFO CARDS */
+.cert-metals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.cert-metal-card {
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+}
+.cert-metal--bad { background: #fff8f8; border-left: 4px solid #ef4444; }
+.cert-metal--good { background: #f0fdf4; border-left: 4px solid var(--green-light); }
+.cert-metal--lab { background: #f0f9ff; border-left: 4px solid #3b82f6; }
+.cert-metal__icon { font-size: 2rem; margin-bottom: 0.75rem; }
+.cert-metal-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--dark); }
+.cert-metal-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.6; }
+
+/* MINERALES */
+.cert-minerals {
+  background: var(--green-dark);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+.cert-minerals__title { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--orange-light); }
+.cert-minerals-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+.cert-mineral-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  transition: background var(--transition);
+}
+.cert-mineral-card:hover { background: rgba(255,255,255,0.14); }
+.cert-mineral__emoji { font-size: 1.75rem; display: block; margin-bottom: 0.5rem; }
+.cert-mineral-card h4 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--orange-light); }
+.cert-mineral-card ul { list-style: none; }
+.cert-mineral-card ul li { font-size: 0.82rem; opacity: 0.85; margin-bottom: 0.3rem; padding-left: 0.75rem; position: relative; }
+.cert-mineral-card ul li::before { content: '·'; position: absolute; left: 0; }
+
+/* BATCH */
+.cert-batch {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 3rem;
+}
+.cert-batch h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--green-dark); }
+.cert-batch > p { font-size: 0.9rem; color: var(--gray); margin-bottom: 1.5rem; }
+
+/* FIRMA */
+.cert-signature {
+  text-align: center;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, var(--green-dark), var(--green-mid));
+  border-radius: var(--radius);
+  color: #fff;
+}
+.cert-signature__badge { font-size: 3rem; margin-bottom: 1rem; }
+.cert-signature p { font-size: 1.05rem; line-height: 1.7; max-width: 600px; margin: 0 auto 1rem; font-style: italic; }
+.cert-signature span { font-size: 0.85rem; opacity: 0.75; }
+
+/* RESPONSIVE CERTIFICADO */
+@media (max-width: 900px) {
+  .cert-kpis { grid-template-columns: repeat(2, 1fr); }
+  .cert-metals-grid { grid-template-columns: 1fr; }
+  .cert-minerals-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .cert-kpis { grid-template-columns: 1fr; }
+  .cert-minerals-grid { grid-template-columns: 1fr; }
+  .cert-why { flex-direction: column; }
 }
