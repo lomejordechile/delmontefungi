@@ -663,7 +663,10 @@ ul { list-style: none; }
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
+  table-layout: fixed;
 }
+.cert-table col.col-extracto { width: 28%; }
+.cert-table col.col-metal    { width: 18%; }
 .cert-table thead tr { background: #f8f5ef; }
 .cert-table th {
   padding: 1rem 1.25rem;
@@ -683,7 +686,7 @@ ul { list-style: none; }
 .cert-table tbody tr:hover { background: #faf8f4; }
 .cert-table--small { font-size: 0.85rem; }
 
-.cert-val { font-weight: 700; border-radius: 6px; padding: 0.2rem 0.6rem; display: inline-block; }
+.cert-val { font-weight: 700; border-radius: 6px; padding: 0.25rem 0.75rem; display: inline-block; min-width: 60px; text-align: center; }
 .cert-val.safe { color: #166534; background: #dcfce7; }
 .cert-val.limit { color: #991b1b; background: #fee2e2; }
 
